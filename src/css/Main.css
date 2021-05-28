@@ -1,0 +1,109 @@
+
+.myContainer {
+  padding-right: 100px; /*15px in bootstrap.css*/
+  padding-left: 100px;  /*idem*/
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  display: flex;
+}
+.container-fluid {
+  padding-left: 192px!important;
+  padding-right: 192px!important;
+}
+
+.iphnes-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-skill{
+    padding-top: 10px;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+  }
+
+  .btn-mg{
+    width: 100%;
+  }
+  .extraRow{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .skills-row{
+    align-items: stretch;
+    justify-content: stretch;
+    padding-bottom: 20px;
+  }
+  .skill-card{
+    border: none!important;
+  }
+  .my-jumbotron{
+    background-color:rgba(0,0,0,0.0)!important;
+  }
+  .blog-row{
+    padding-top: 30px;
+  }
+  .bottom-social-row{
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+
+  .bottom-social-col{
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .header{
+    color: white;
+    font-weight: 700;
+    text-align: left;
+  }
+.mainText{
+  color: white;
+  text-align: left;
+  font-weight: 400;
+  font-size: 25;
+}
+
+.header2{
+  font-weight: 400;
+  color: white;
+  text-align: left;
+}
+.myRow{
+  justify-content: start;
+}
+.techRow{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.avatar{
+  width: 476px;
+  height: 474px;
+}
+.avatarCol{
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+
+.yearText{
+  color: white;
+  font-weight: 700;
+
+}
+.courseMainText{
+  font-weight: 700;
+  color: white;
+}
+.courseSeconderyText{
+  font-weight: 400;
+  color: white;
+}

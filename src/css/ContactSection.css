@@ -1,0 +1,23 @@
+.contactRow{
+    justify-items: center;
+    justify-content: center;
+}
+.mainContactText{
+    text-align: center;
+    color: white;
+
+}
+
+.subText{
+    text-align: center;
+    color: white;
+}
+.icon{
+    width: 34px;
+    height: 25px;
+}
+
+.icon2{
+    width: 34px;
+    height: 32px;
+}

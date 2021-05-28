@@ -1,0 +1,17 @@
+.projectRow{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.techs-row{
+  align-content: flex-start;
+  justify-content: baseline;
+}
+
+.descriptiopn {
+  text-align: left;
+}
+
+.projectImages{
+  background-color: rgba(88, 170, 175, 1);
+  ;
+}
