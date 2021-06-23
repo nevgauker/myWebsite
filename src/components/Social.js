@@ -7,9 +7,6 @@ import medium from '../images/social/medium.png';
 
 
 
-import { Container, Jumbotron, Col, Row, Card, Button } from 'react-bootstrap/';
-
-
 function Social() {
 
     const openLink = (link) => {

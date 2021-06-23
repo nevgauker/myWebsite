@@ -1,17 +1,38 @@
 .blogTitle{
     color:rgba(40, 75, 99, 1);
     font-weight: 700;
+    font-size: 31px;
 }
 .blogSubtitle{
     color:rgba(40, 75, 99, 1);
     font-weight: 400;
+    font-size: 25px;
 }
 
 .blogText{
     color:rgba(40, 75, 99, 1);
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .btnImage{
     height: 60px;
     width: 253px;
 }
+
+
+@media (max-width : 768px){
+    .blogTitle{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .blogTitle{
+        font-weight: 400;
+        font-size: 17px;
+    }
+    .blogText{
+        font-weight: 400;
+        font-size: 16px;
+    }
+  }
+  

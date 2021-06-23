@@ -20,40 +20,144 @@ import iphone from '../images/iphone-placeholder.png';
 import '../css/ProjectRow.css';
 
 
+import React, {Component} from 'react'
 
 
-function ProjectRow(props) {
+import SimpleImageSlider from "react-simple-image-slider";
 
-    const { project } = props;
+class ProjectRow extends Component {
 
-    const renderTech = (t) => {
-        return (
-            <Col md={3}>
-                <ImageCard title={t.name} img={t.image} />
-            </Col>
-        );
+    constructor(props) {
+        super();
+        this.state = {
+           project : props.project,
+           leftToRight : props.leftToRight,
+           width: window.innerWidth
+          }
     }
 
-    return (
-        <Row className='projectRow'>
-            <Col md={6}>
-                <h2>{project.projectName}</h2>
-                <h5>{project.technologiesNames}</h5>
-                <p className='descriptiopn'>{project.descriptionText}</p>
-                <Row className='techs-row'>{project.technologies.map(t => renderTech(t))}</Row>
-            </Col>
-            <Col className='iphnes-col' md={6}>
-                <Row className='projectImages'>
-                    <Col md={6}>
-                        <img class="img-fluid" src={project.image1} alt="iphone image"></img>
-                    </Col>
-                    <Col md={6}>
-                        <img class="img-fluid" src={project.image2} alt="iphone image"></img>
-                    </Col>
-                </Row>
-            </Col>
-        </Row>
-    );
+    componentDidMount() {
+        window.addEventListener('resize', this.updateDimensions);
+      }
+      componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+      }
+
+      updateDimensions = () => {
+        this.setState({ width: window.innerWidth});
+      };
+
+
+     renderTech = (t) => {
+        return ( <ImageCard title={t.name} img={t.image} />);
+    }
+
+
+    renderSlider = (project) => {
+
+        if (project.projectName != 'Store'){
+
+            return(
+                <SimpleImageSlider
+                width={281}
+                height={500}
+                bgColor={'#58aaaf'}
+                images={[{url:project.image1},
+                {url:project.image2}]}
+                showNavs={true}
+                showBullets={true}
+        />
+            );
+
+
+        }else {
+            return(
+                <SimpleImageSlider
+                width={280}
+                height={200}
+                bgColor={'#58aaaf'}
+                images={[{url:project.image1},
+                {url:project.image2}]}
+                showNavs={true}
+                showBullets={true}
+        />
+    
+            );
+
+
+        }
+
+     
+
+    }
+
+    renderRow  = () => {
+        
+        const { project,leftToRight,width } = this.state;
+        if (width <= 500 ){
+                    return (
+                        <Col className='col-sm-12'>
+                        <h2 className='prjoectName'>{project.projectName}</h2>
+                        <p className='descriptiopn'>{project.descriptionText}</p>
+                        <Row className='techs-row'>{project.technologies.map(t => this.renderTech(t))}</Row>
+                        <Row className='gallery'>
+
+                            {this.renderSlider(project)}
+
+                        </Row>
+                       
+                        </Col>
+                        );
+        }else {
+            if  (leftToRight){
+                return (
+                    <Row className='projectRow'>
+                <Col md={6}>
+                    <h2 className='prjoectName'>{project.projectName}</h2>
+                    <p className='descriptiopn'>{project.descriptionText}</p>
+                    <Row className='techs-row'>{project.technologies.map(t => this.renderTech(t))}</Row>
+                </Col>
+                <Col md={6}>
+                    <Row className='projectImages'>
+                        <Col md={6}>
+                            <img class="img-fluid" src={project.image1} alt="iphone image"></img>
+                        </Col>
+                        <Col md={6}>
+                            <img class="img-fluid" src={project.image2} alt="iphone image"></img>
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+            );
+            } else {
+                return (
+                    <Row className='projectRow'>
+                        <Col className='iphnes-col' md={6}>
+                    <Row className='projectImages'>
+                        <Col md={6}>
+                            <img class="img-fluid" src={project.image1} alt="iphone image"></img>
+                        </Col>
+                        <Col md={6}>
+                            <img class="img-fluid" src={project.image2} alt="iphone image"></img>
+                        </Col>
+                    </Row>
+                </Col>
+                <Col md={6}>
+                    <h2  className='prjoectName'>{project.projectName}</h2>
+                    <p className='descriptiopn'>{project.descriptionText}</p>
+                    <Row className='techs-row'>{project.technologies.map(t => this.renderTech(t))}</Row>
+                </Col>
+                
+            </Row>
+            );
+            }
+        }
+    }
+
+    render() {
+        return(this.renderRow());
+    }
+    
 }
 
 export default ProjectRow;

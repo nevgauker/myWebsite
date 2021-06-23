@@ -14,3 +14,24 @@
     padding: 0px;
 
 }
+
+
+@media (max-width : 768px){
+    .tech-img{
+        width: 60px;
+        height: 60px;
+        align-self: center;
+        justify-self: center;
+        margin: 22px;
+        padding: 0px;
+    }
+    .tech-image-container{
+       
+        height: 82px;
+        width: 82px;
+        margin: px;
+        padding: 0px;
+    
+    }
+    
+  }

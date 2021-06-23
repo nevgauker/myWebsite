@@ -5,9 +5,9 @@ function SectionTitle(props) {
 
     const { title, subTitle } = props;
     return (
-        <Row>
+        <Row className='sectionRow'>
             <Col md={12}>
-                <h2 className='mainTitle'>{title} </h2>
+                <h1 className='mainTitle'>{title} </h1>
                 <h5>{subTitle}</h5>
             </Col>
         </Row>

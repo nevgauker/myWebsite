@@ -12,7 +12,9 @@ function BlogCard(props) {
             <h4 class="card-title blogSubtitle">{ subtitle }</h4>
             <div class="card-body">
                 <p class="card-text  blogText">{text}</p>
-                <button type="button" class="btn readMoreButton"><img className='btnImage'  src={readMore}/></button>
+            </div>
+            <div class="btn-group" role="group">
+                    <button type="button" class="btn readMoreButton"><img className='btnImage'  src={readMore}/></button>
             </div>
         </Card>
     );

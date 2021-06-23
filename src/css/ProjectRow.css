@@ -9,9 +9,45 @@
 
 .descriptiopn {
   text-align: left;
+  color: white;
 }
 
 .projectImages{
+  padding-top: 37px;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 37px;
   background-color: rgba(88, 170, 175, 1);
-  ;
+  border-radius: 25px;
+}
+.prjoectName{
+  color: white;
+}
+
+.gallery{
+  padding: 50px;
+  background-color: '#58aaaf';
+  color: rgba(40, 75, 99, 1)!important;
+}
+
+.iphones-col{
+  padding-left: 100px;
+}
+
+
+@media (max-width : 768px){
+  .prjoectName{
+    font-size: 20px;
+  }
+  .descriptiopn {
+    font-size: 16px;    
+  }
+  .gallery{
+      justify-content: center;
+      justify-items: center;
+      background-color: #58aaaf;
+      margin-top: 20px;
+  }
+
+  
 }

@@ -1,5 +1,5 @@
 .contactRow{
-    justify-items: center;
+    padding-top: 30px;
     justify-content: center;
 }
 .mainContactText{
@@ -15,9 +15,16 @@
 .icon{
     width: 34px;
     height: 25px;
+    margin-right: 20px;
 }
 
 .icon2{
     width: 34px;
     height: 32px;
+    margin-right: 20px;
+    margin-left: 46px;
+}
+
+.bla{
+    background-color: pink;
 }

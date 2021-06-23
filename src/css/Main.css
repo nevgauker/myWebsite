@@ -76,6 +76,7 @@
   text-align: left;
 }
 .myRow{
+  padding-top: 141px;
   justify-content: start;
 }
 .techRow{
@@ -86,6 +87,8 @@
 .avatar{
   width: 476px;
   height: 474px;
+  justify-content: center;
+  justify-items: center;
 }
 .avatarCol{
   justify-content: center;
@@ -103,7 +106,90 @@
   font-weight: 700;
   color: white;
 }
+
 .courseSeconderyText{
   font-weight: 400;
   color: white;
+}
+.extraNormal{
+  font-size: 20px;
+}
+.extraBold{
+  font-size: 30px;
+}
+.subtitle{
+  font-weight: 700;
+  color: white;
+}
+
+.socialRow{
+  padding-top:46px;
+  padding-bottom: 172px;
+  justify-content: center;
+}
+
+.refName{
+  color: white;
+  font-size: 31px;
+  font-weight: bold;
+  padding-bottom: 197px;
+}
+.refText{
+  color: white;
+  font-size: 25px;
+}
+
+.copywrites{
+  color: white;
+}
+@media (max-width : 768px){
+  .container-fluid {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
+  .techRow{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .blog{
+    margin-bottom: 63px;
+  }
+  .header{
+    font-size: 34px;
+  }
+  .header2{
+    font-size: 20px;
+  }
+  .mainText{
+    font-size: 16px;
+  }
+  .mobilePadding{
+    padding-left: 34px!important;
+    padding-right: 33px!important;
+  }
+  .yearText{
+   font-size: 16px;
+  
+  }
+  .courseMainText{
+    font-size: 16px;
+
+  }
+  .courseSeconderyText{
+    font-size: 16px;
+
+  }
+
+  .extraNormal{
+    font-size: 16px;
+  }
+  .extraBold{
+    font-size: 16px;
+  }
+
+
+  .subtitle{
+    font-size: 20px;
+  }
+  
 }

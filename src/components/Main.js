@@ -1,9 +1,5 @@
 import '../css/Main.css';
-
-
-
-import { Container, Jumbotron, Col, Row, Card, Button } from 'react-bootstrap/';
-import { Linkedin, GitHub } from 'react-feather';
+import { Col, Row } from 'react-bootstrap/';
 
 
 //technologgies
@@ -37,31 +33,20 @@ import store2 from '../images/projects/store/2.png'
 
 
 
-import userImage from '../images/user_placeholder.png'
+import userImage from '../images/myPhoto.png'
 
 
 import ImageCard from './ImageCard';
 import ProjectRow from './ProjectRow';
 import Social from './Social';
 import SectionTitle from './SectionTitle';
-import ExtraCard from './ExtraCard';
 import BlogCard from './BlogCard';
-
 import Project from '../model/Project'
-
 import Technology from '../model/Techology';
-
 import ContactSection from './ContactSection';
-
-import Data from '../Data';
-
 
 
 function Main() {
-
-
-    var data  = new Data;
-
 
     var swiftTechnology = new Technology('Swift', swift);
     var objcTechnology = new Technology('Objective-c', objc);
@@ -84,24 +69,22 @@ function Main() {
     var storeText = 'This is a  personal project for me in order to experiment  with the ecommerce world.  this is a functioning store including paypal payment integration ';
 
 
-
-
-    var expertxProject = new Project('ExpertX', 'Swift,Repplaykit,firebase,google-cloud', expertxText, expertx1, expertx2, [swiftTechnology,firebaseTechnology,googleTechnology]);
-    var willerProject = new Project('Willer', 'Swift,Objective-c,Parse,Firebase', willerText, willer1, willer2, [swiftTechnology, objcTechnology]);
-    var duedoProject = new Project('DueDo', 'Swift', duedoText, duedo1, duedo2, [swiftTechnology]);
-    var chatProject = new Project('Chat UI', 'Flutter,Firebase', chatText, chat1, chat2, [flutterTechnology, firebaseTechnology]);
-    var bmiProject = new Project('Bmi Calculator', 'Flutter', bmiText, bmi1, bmi2, [flutterTechnology]);
-    var storeProject = new Project('Store', 'React.js,Node.js,MongoDB', storeText, store1, store2, [reactTechnology,nodeTechnology,mongoTechnology]);
+    var expertxProject = new Project('ExpertX', 'Swift,Repplaykit,firebase,google-cloud', expertxText, expertx1, expertx2, [swiftTechnology,firebaseTechnology,googleTechnology],null,'https://apps.apple.com/us/app/expertx/id1504334527');
+    var willerProject = new Project('Willer', 'Swift,Objective-c,Parse,Firebase', willerText, willer1, willer2, [swiftTechnology, objcTechnology],null,null);
+    var duedoProject = new Project('DueDo', 'Swift', duedoText, duedo1, duedo2, [swiftTechnology],null,'https://apps.apple.com/us/app/duedo/id1061979346');
+    var chatProject = new Project('Chat UI', 'Flutter,Firebase', chatText, chat1, chat2, [flutterTechnology, firebaseTechnology],'https://github.com/nevgauker/chat_ui',null);
+    var bmiProject = new Project('Bmi Calculator', 'Flutter', bmiText, bmi1, bmi2, [flutterTechnology],'https://github.com/nevgauker/bmi_calculator',null);
+    var storeProject = new Project('Store', 'React.js,Node.js,MongoDB', storeText, store1, store2, [reactTechnology,nodeTechnology,mongoTechnology],'https://github.com/nevgauker/my-store',);
 
 
     return (
       
         <div className='container-fluid'>
-            <Col>
+            <Col className='mobilePadding'>
                 <Row>
                     <Col md={12}>
                             <Row className='myRow'>
-                                <Col>
+                                <Col sm={12} md={12} lg={6}>
                                         <Row>
                                             <h1 className='header'>My name is Rotem</h1>
                                         </Row>
@@ -120,17 +103,27 @@ function Main() {
                                         </p>
                                     </Row>
                                 </Col>
-                                <Col className='avatar'>
+                                <Col sm={12} md={12} lg={6} className='avatar'>
                                     <img className='avatar' src={userImage} />
                                 </Col>
                             </Row>
                             
                     </Col>
                 </Row>
-                <ContactSection/>
-                <Row>
+                <ContactSection
+                    width={window.innerWidth}
+                />
+                <Row className='socialRow'>
                     <Social />
                  </Row>
+                 <SectionTitle title={'What clients are saying...'}/>
+                 <p className='refText'>
+                 "Rotem built the iOS version of our new concept and has
+                  been fantastic to work with. He's constantly thinking of
+                   smart ways to improve the experience while coding quickly and efficiently."
+                 </p>
+                 <h3 className='refName'>Richard Demb</h3>
+
                 <SectionTitle title={'My Skills'}/>
                 <Row>
                     <Col md={6} sm={12}>
@@ -193,124 +186,140 @@ function Main() {
                         </Row>
                     </Col>
                     <Col md={6} sm={12}>
-                        <Row>
-                            <Col>
+                        <Row className='techRow'>
+                            <div className='pr-md-2'>
                                 <ImageCard img={node} />
-                            </Col>
-                            <Col>
+                            </div>
+                            <div className='pr-md-2'>
                                 <ImageCard  img={mongo} />
-                            </Col>
-                            <Col>
+                            </div>
+                            <div className='pr-md-2'>
                                 <ImageCard img={firebase} />
-                            </Col>
-                            <Col>
+                            </div>
+                            <div className='pr-md-2'>
                                 <ImageCard img={googleCloud} />
-                            </Col>
+                            </div>
+                            
                         </Row>
-                        <Row>
-                            <Col>
+                        <Row className='techRow'>
+                            <div className='pr-md-2'>
                                 <ImageCard  img={python} />
-                            </Col>
-                            <Col>
+                            </div>
+                            <div className='pr-md-2'>
                                  <ImageCard img={django} />
-                            </Col>
-                            <Col>
+                            </div>
+                            <div className='pr-md-2'>
                                 <ImageCard img={js} />
-                            </Col>
-                            <Col>
+                            </div>
+                            <div className='pr-md-2'>
                                  <ImageCard img={sql } />
-                            </Col> 
+                            </div> 
                         </Row>
                     </Col>
                 </Row>
                 <SectionTitle title={'My Projects'}/>
                 <ProjectRow
                     project={duedoProject}
+                    leftToRight={true}
                 />
                 <ProjectRow
                     project={expertxProject}
+                    leftToRight={false}
                 />
                 <ProjectRow
                     project={willerProject}
+                    leftToRight={true}
                 />
                 <ProjectRow
                     project={chatProject}
+                    leftToRight={false}
                 />
                 <ProjectRow
                     project={bmiProject}
+                    leftToRight={true}
                 />
                   <ProjectRow
                     project={storeProject}
+                    leftToRight={false}
                 />
                 <SectionTitle title={'Education'} />
-                <h2>Udemy Courses</h2>
+                <h2 className='subtitle'>Udemy Courses</h2>
                 <Row>
-                    <Col className='col-4'>
+                    <Col className='col-lg-1 col-md-2 col-sm-3'>
                         <h4 className='yearText'>2020 - </h4>
                     </Col>
-                    <Col className='col-8'>
+                    <Col className='col-lg-11 col-md-10 col-sm-9'>
                         <Row><h4  className='courseMainText'>React Native -</h4><h4 className='courseSeconderyText'>complete course, include hooks</h4></Row>
                         <Row><h4 className='courseMainText'>Flutter Bootcamp Course -</h4> <h4 className='courseSeconderyText'>Over 28 hours flutter development course where we build over 15 flully-fledged apps.</h4></Row>
                         <Row><h4 className='courseMainText'>3D Blender Modeling</h4></Row>
                     </Col>
                 </Row>
                 <Row>
-                    <Col className='col-4'>
+                    <Col className='col-lg-1 col-md-2 col-sm-3'>
                         <h4 className='yearText'>2018 - </h4>
                     </Col>
-                    <Col className='col-8'>
+                    <Col className='col-lg-11 col-md-10 col-sm-9'>
                         <Row><h4  className='courseMainText'>Full stack web development course -</h4><h4 className='courseSeconderyText'>I learned Fronted and Backend development.</h4></Row>
                     </Col>
                 </Row>
                 <Row>
-                    <Col className='col-4'>
+                    <Col className='col-lg-1 col-md-2 col-sm-3'>
                         <h4 className='yearText'>2017 - </h4>
                     </Col>
-                    <Col className='col-8'>
+                    <Col className='col-lg-11 col-md-10 col-sm-9'>
                         <Row><h4  className='courseMainText'>Python & Django -</h4><h4 className='courseSeconderyText'>Building a REST API</h4></Row>
                         <Row><h4  className='courseMainText'>C# and Unity  game development-</h4><h4 className='courseSeconderyText'>Games development in unity</h4></Row>
 
                     </Col>
                 </Row>
                 <Row>
-                    <Col className='col-4'>
+                    <Col className='col-lg-1 col-md-2 col-sm-3'>
                         <h4 className='yearText'>2010 - </h4>
                     </Col>
-                    <Col className='col-8'>
+                    <Col className='col-lg-11 col-md-10 col-sm-9'>
                         <Row><h4  className='courseMainText'>IOS Development Course -</h4><h4 className='courseSeconderyText'>Etgar college</h4></Row>
 
                     </Col>
                 </Row>
                 <Row>
-                    <Col className='col-4'>
+                    <Col className='col-lg-2 col-md-3 col-sm-4'>
                         <h4 className='yearText'>2002 -  2004 </h4>
                     </Col>
-                    <Col className='col-8'>
+                    <Col className='col-lg-10 col-md-9 col-sm-8'>
                         <Row><h4  className='courseMainText'>B.Sc in  Biology-</h4><h4 className='courseSeconderyText'>Ben Gurion University</h4></Row>
 
                     </Col>
                 </Row>
                 <SectionTitle title={'Extra Curricular'}/>
-                
-                
-               
+                <Row><p  className='courseMainText extraNormal'><b className='extraBold'>Volunteering in animals (ex-anonymous)
+                  - 2020 -</b> I am helping  build the  new challange 22 app.
+                     Challange 22 is a support project, helping people expirence
+                      veganism for the first time.</p></Row>
+                      <Row>
+                          <p className='courseMainText extraNormal'>
+                            <b className='extraBold'>One of the founding memebrs of Willer - </b>
+                            2014-2015 | 2019-2020 - Willer is a an open marketplace. It was cyrpto base in
+
+                            the past. now it is trasnforming into a network of people helping each other.
+                          </p>
+                      </Row>
                 <SectionTitle title={'Latest from my blog'}/>
                 <Row className='blog-row'>
-                    <Col md={4}>
+                    <Col md={4}  sm={12} className='blog'>
                         <BlogCard
                             title={'My developer story'}
                             subtitle={'How did i started coding'}
                             text={'As a kid , beside a few basic lessons , i mainly used my computer for games...'}
                         />
                     </Col>
-                    <Col md={4}>
-                        <BlogCard
+                    <Col md={4} sm={12} className='blog'>
+                        <BlogCard 
                             title={'Keeping your focus'}
                             subtitle={'When everything intersed you'}
                             text={'A have a lot of intersts, and  from someone from the side  t looks like i am all over the place...'}
                         />
                     </Col>
-                    <Col md={4}>
+                    <Col md={4}  sm={12} className='blog'>
                         <BlogCard
                             title={'Coding for a puprose'}
                             subtitle={'Put your skills for good purpose'}
@@ -322,10 +331,15 @@ function Main() {
             <footer>
                 <Row>
                     <Col md={12}>
-                        <h8>copywrites © 2020.</h8>
-                        <h8>rotem nevgauker - developer</h8>
+                        <h8 className='copywrites'>All Rights Reserved © Rotem Nevgauker</h8>
                     </Col>
                 </Row>
+                <Row>
+                    <Col md={12}>
+                        <h8 className='copywrites'>Designed by Neimer Design</h8>
+                    </Col>
+                </Row>
+
             </footer>
 
 
