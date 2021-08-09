@@ -7,6 +7,7 @@ import email from '../images/email.png';
 
 
 import React, {Component} from 'react'
+import { send } from 'emailjs-com';
 
 
 class ContactSection extends Component {
@@ -32,29 +33,42 @@ class ContactSection extends Component {
 
     renderRow = () => {
         const { width } = this.state;
-
-
-
         if (width <= 500){
             return (
                 <Container>
 <                   Row className='contactRow'>
-                        <img  className='icon'  src={email} alt='email'></img>
-                        <h4 className='subText'>nevgauker@gmauk.com</h4>
+                        <a href="/contact">
+                            <img  className='icon'  src={email} alt='email'></img>
+                        </a>
+                        <a href="/contact">
+                            <h4 className='subText'>nevgauker@gmail.com</h4>
+                        </a>
                     </Row>
                     <Row className='contactRow'>
-                        <img className='icon2' src={phone} alt="phone"></img>
-                        <h4 className='subText'>0547646847</h4>
+                        <a href="tel:+972-54-7646847">
+                            <img className='icon2' src={phone} alt="phone"></img>
+                        </a>
+                        <a href="tel:+972-54-7646847">
+                            <h4 className='subText'>0547646847</h4>
+                        </a>
                     </Row>
                 </Container>
                );
         }else {
             return (
                 <Row className='contactRow'>
-                <img  className='icon'  src={email} alt='email'></img>
-                <h4 className='subText'>nevgauker@gmauk.com</h4>
-                <img className='icon2' src={phone} alt="phone"></img>
-                <h4 className='subText'>0547646847</h4>
+                    <a href="/contact">
+                        <img  className='icon'  src={email} alt='email'></img>
+                    </a>
+                    <a href="/contact">
+                        <h4 className='subText'>nevgauker@gmail.com</h4>
+                    </a>
+                    <a href="tel:+972-54-7646847">
+                        <img className='icon2' src={phone} alt="phone"></img>
+                    </a>
+                    <a href="tel:+972-54-7646847">
+                        <h4 className='subText'>0547646847</h4>
+                    </a>
                 </Row>
                );
         } 

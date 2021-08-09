@@ -12,6 +12,12 @@
     text-align: center;
     color: white;
 }
+
+a:hover {
+    color: black;
+}
+  
+
 .icon{
     width: 34px;
     height: 25px;
