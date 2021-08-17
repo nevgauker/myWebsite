@@ -37,61 +37,60 @@ function ContactForm() {
 
     return (
       <div className='container-fluid'>
-        <Col sm={12}>
-          <Row>
-              <h4 className='formTitle'>Contact</h4>
-          </Row>
-          <Row>
-            <form onSubmit={onSubmit}>
-                <div class="form-group">
-                    <label className='fieldTitle' for="exampleInputEmail1">Email address</label>
-                    <input
-                      type='text'
-                      name='from_name'
-                      placeholder='from name'
-                      value={toSend.from_name}
-                      onChange={handleChange}
-                  />
-                </div>
-                <div class="form-group">
+      <Col sm={12}>
+        <Row>
+            <h4 className='formTitle'>Contact</h4>
+        </Row>
+        <Row>
+          <form onSubmit={onSubmit}>
+              <div class="form-group">
                   <label className='fieldTitle' for="exampleInputEmail1">Email address</label>
                   <input
                     type='text'
-                    name='to_name'
-                    placeholder='to name'
-                    value={toSend.to_name}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div class="form-group">
-                  <label className='fieldTitle' for="exampleInputEmail1">Email address</label>
-                  <textarea
-                    type='text'
-                    name='message'
-                    placeholder='Your message'
-                    value={toSend.message}
+                    name='from_name'
+                    placeholder='from name'
+                    value={toSend.from_name}
                     onChange={handleChange}
                 />
+              </div>
+              <div class="form-group">
+                <label className='fieldTitle' for="exampleInputEmail1">Email address</label>
+                <input
+                  type='text'
+                  name='to_name'
+                  placeholder='to name'
+                  value={toSend.to_name}
+                  onChange={handleChange}
+                />
+              </div>
+              <div class="form-group">
+                <label className='fieldTitle' for="exampleInputEmail1">Email address</label>
+                <textarea
+                  type='text'
+                  name='message'
+                  placeholder='Your message'
+                  value={toSend.message}
+                  onChange={handleChange}
+              />
 
-                </div>
-                <div class="form-group">
-                    <label className='fieldTitle' for="exampleInputEmail1">Email address</label>
-                    <input
-                      type='text'
-                      name='reply_to'
-                      placeholder='Your email'
-                      value={toSend.reply_to}
-                      onChange={handleChange}
-                    />
-                </div>
-          <button type='Send'>Submit</button>
-          </form>  
-          </Row>
-        </Col>
-       
+              </div>
+              <div class="form-group">
+                  <label className='fieldTitle' for="exampleInputEmail1">Email address</label>
+                  <input
+                    type='text'
+                    name='reply_to'
+                    placeholder='Your email'
+                    value={toSend.reply_to}
+                    onChange={handleChange}
+                  />
+              </div>
+        <button type='Send'>Submit</button>
+        </form>  
+        </Row>
+      </Col>
+     
 
-      </div>
-       
+    </div>
     );
 
 }

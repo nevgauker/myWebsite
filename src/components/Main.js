@@ -69,12 +69,12 @@ function Main() {
     var storeText = 'This is a  personal project for me in order to experiment  with the ecommerce world.  this is a functioning store including paypal payment integration ';
 
 
-    var expertxProject = new Project('ExpertX', 'Swift,Repplaykit,firebase,google-cloud', expertxText, expertx1, expertx2, [swiftTechnology,firebaseTechnology,googleTechnology],null,'https://apps.apple.com/us/app/expertx/id1504334527');
-    var willerProject = new Project('Willer', 'Swift,Objective-c,Parse,Firebase', willerText, willer1, willer2, [swiftTechnology, objcTechnology],null,null);
-    var duedoProject = new Project('DueDo', 'Swift', duedoText, duedo1, duedo2, [swiftTechnology],null,'https://apps.apple.com/us/app/duedo/id1061979346');
-    var chatProject = new Project('Chat UI', 'Flutter,Firebase', chatText, chat1, chat2, [flutterTechnology, firebaseTechnology],'https://github.com/nevgauker/chat_ui',null);
-    var bmiProject = new Project('Bmi Calculator', 'Flutter', bmiText, bmi1, bmi2, [flutterTechnology],'https://github.com/nevgauker/bmi_calculator',null);
-    var storeProject = new Project('Store', 'React.js,Node.js,MongoDB', storeText, store1, store2, [reactTechnology,nodeTechnology,mongoTechnology],'https://github.com/nevgauker/my-store',);
+    var expertxProject = new Project('ExpertX', 'Swift,Repplaykit,firebase,google-cloud', expertxText, expertx1, expertx2, [swiftTechnology,firebaseTechnology,googleTechnology], null, null, 'https://apps.apple.com/us/app/expertx/id1504334527');
+    var willerProject = new Project('Willer', 'Swift,Objective-c,Parse,Firebase', willerText, willer1, willer2, [swiftTechnology, objcTechnology], null, null, null);
+    var duedoProject = new Project('DueDo', 'Swift', duedoText, duedo1, duedo2, [swiftTechnology],null, null, 'https://apps.apple.com/us/app/duedo/id1061979346');
+    var chatProject = new Project('Chat UI', 'Flutter,Firebase', chatText, chat1, chat2, [flutterTechnology, firebaseTechnology],'https://github.com/nevgauker/chat_ui',  null, null);
+    var bmiProject = new Project('Bmi Calculator', 'Flutter', bmiText, bmi1, bmi2, [flutterTechnology],'https://github.com/nevgauker/bmi_calculator',null, null);
+    var storeProject = new Project('Store', 'React.js,Node.js,MongoDB', storeText, store1, store2, [reactTechnology,nodeTechnology,mongoTechnology],'https://github.com/nevgauker/my-store', null, null);
 
 
     return (

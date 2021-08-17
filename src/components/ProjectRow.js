@@ -17,6 +17,11 @@ import js from '../images/technologies/js.png';
 import mongo from '../images/technologies/mongo.png';
 import iphone from '../images/iphone-placeholder.png';
 
+
+import link from '../images/link.png';
+import store from '../images/store.png';
+import github from '../images/github.png';
+
 import '../css/ProjectRow.css';
 
 
@@ -112,22 +117,34 @@ class ProjectRow extends Component {
             if  (leftToRight){
                 return (
                     <Row className='projectRow'>
-                <Col md={6}>
-                    <h2 className='prjoectName'>{project.projectName}</h2>
-                    <p className='descriptiopn'>{project.descriptionText}</p>
-                    <Row className='techs-row'>{project.technologies.map(t => this.renderTech(t))}</Row>
-                </Col>
-                <Col md={6}>
-                    <Row className='projectImages'>
                         <Col md={6}>
-                            <img class="img-fluid" src={project.image1} alt="iphone image"></img>
+                            <h2 className='prjoectName'>{project.projectName}</h2>
+                            <p className='descriptiopn'>{project.descriptionText}</p>
+                            <Row className='techs-row'>{project.technologies.map(t => this.renderTech(t))}</Row>
+                            <Row><h6  className='linkTitle'>View on</h6></Row>
+                            <Row>
+                                <a href={project.github}>
+                                    <img class="img-fluid linkImage" src={github} alt="github image"></img>
+                                </a>
+                                <a href={project.link}>
+                                    <img class="img-fluid linkImage" src={link} alt="link image"></img>
+                                </a>
+                                <a href={project.store}>
+                                    <img class="img-fluid linkImage" src={store} alt="store image"></img>
+                                </a>
+                            </Row>
                         </Col>
                         <Col md={6}>
-                            <img class="img-fluid" src={project.image2} alt="iphone image"></img>
+                            <Row className='projectImages'>
+                                <Col md={6}>
+                                    <img class="img-fluid" src={project.image1} alt="iphone image"></img>
+                                </Col>
+                                <Col md={6}>
+                                    <img class="img-fluid" src={project.image2} alt="iphone image"></img>
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
-                </Col>
-            </Row>
             );
             } else {
                 return (
@@ -146,6 +163,18 @@ class ProjectRow extends Component {
                     <h2  className='prjoectName'>{project.projectName}</h2>
                     <p className='descriptiopn'>{project.descriptionText}</p>
                     <Row className='techs-row'>{project.technologies.map(t => this.renderTech(t))}</Row>
+                    <Row><h6  className='linkTitle'>View on</h6></Row>
+                    <Row>
+                        <a href={project.github}>
+                            <img class="img-fluid linkImage" src={github} alt="github image"></img>
+                        </a>
+                        <a href={project.link}>
+                            <img class="img-fluid linkImage" src={link} alt="link image"></img>
+                        </a>
+                        <a href={project.store}>
+                            <img class="img-fluid linkImage" src={store} alt="store image"></img>
+                        </a>
+                    </Row>
                 </Col>
                 
             </Row>

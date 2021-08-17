@@ -8,8 +8,9 @@ class Project {
     technologies;
     github;
     link;
+    store;
 
-    constructor(projectName, technologiesNames, descriptionText, image1,image2,technologies,github,link) {
+    constructor(projectName, technologiesNames, descriptionText, image1,image2,technologies,github,link,store) {
             this.projectName = projectName;
             this.technologiesNames = technologiesNames;
             this.descriptionText = descriptionText;
@@ -18,8 +19,7 @@ class Project {
             this.technologies = technologies;
             this.github = github;
             this.link = link;
-
-
+            this.store = store;
           }
 }
 

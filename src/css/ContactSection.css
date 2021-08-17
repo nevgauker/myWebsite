@@ -12,11 +12,13 @@
     text-align: center;
     color: white;
 }
-
-a:hover {
-    color: black;
+.subText:hover{
+    color: white;
+    text-decoration: underline;
 }
-  
+a:hover{
+    text-decoration: none!important;
+}
 
 .icon{
     width: 34px;
@@ -29,8 +31,4 @@ a:hover {
     height: 32px;
     margin-right: 20px;
     margin-left: 46px;
-}
-
-.bla{
-    background-color: pink;
 }
