@@ -1,0 +1,96 @@
+.formTitle{
+    color: black;
+    margin-top: 10px;
+    font-weight: 'bold';
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.fieldTitle{
+    font-weight: 500;
+    color: black;
+    margin-right: 20px;
+}
+.background{
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(40, 75, 99, 1);
+}
+.mainRow{
+    justify-content: center;
+    align-items: center;
+}
+.titleRow{
+    justify-content: center;
+    align-items: center;
+}
+.formContainer{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 40px;
+}
+.submitBtn{
+    height: 40px;
+    width: 160px;
+    background-color: green;
+    border-radius: 10px;
+}
+.submitBtn:hover {
+    background-color: orange;
+}
+.btnTitle{
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+.btnTitle:hover {
+    color: black;
+}
+
+.center {
+    margin: 0 auto;
+    width: 80%;
+}
+.mainText{
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 200px;
+}
+.theText{
+    width: 100%;
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+html, body, #app, #app>div {
+    height: 100%
+  }
+
+
+
+  @media (max-width : 768px){
+
+    .mainRow{
+        justify-content: stretch;
+    }
+    .titleRow{
+        justify-content: stretch;
+    }
+    .formContainer{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .background{
+      background-color: white;
+    }
+  
+}

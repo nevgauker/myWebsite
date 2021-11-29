@@ -143,6 +143,10 @@
   color: white;
 }
 @media (max-width : 768px){
+  .avatar{
+    width: 276px;
+    height: 274px;
+  }
   .container-fluid {
     padding-left: 0px!important;
     padding-right: 0px!important;

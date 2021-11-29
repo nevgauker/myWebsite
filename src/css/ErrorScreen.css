@@ -1,0 +1,16 @@
+.background{
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(40, 75, 99, 1);
+}
+
+.errorTitle{
+    font-size: 104px;
+    color: white;
+    font-weight: 800;
+}

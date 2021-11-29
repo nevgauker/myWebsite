@@ -1,4 +1,8 @@
 .App {
   text-align: center;
   background-color:rgba(40, 75, 99, 1);
+  width: 100%;
+}
+.Body{
+  width: 100%;
 }

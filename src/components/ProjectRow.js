@@ -64,8 +64,8 @@ class ProjectRow extends Component {
 
             return(
                 <SimpleImageSlider
-                width={281}
-                height={500}
+                width={231}
+                height={450}
                 bgColor={'#58aaaf'}
                 images={[{url:project.image1},
                 {url:project.image2}]}
@@ -96,6 +96,31 @@ class ProjectRow extends Component {
 
     }
 
+    renderLinksRow = (project) => {
+        return(
+            <Row>
+                {
+                project.github !=null ? <a href={project.github}>
+                                        <img class="img-fluid linkImage" src={github} alt="github image"></img>
+                                    </a> : null
+                }
+                {
+                    project.link != null ? <a href={project.link}>
+                                             <img class="img-fluid linkImage" src={link} alt="link image"></img>
+                                             </a>
+                                        : null
+                }
+                {
+                    project.store != null ? <a href={project.store}>
+                                                <img class="img-fluid linkImage" src={store} alt="store image"></img>
+                                            </a>
+                                        : null
+                }
+                
+            </Row>
+        );
+    }
+
     renderRow  = () => {
         
         const { project,leftToRight,width } = this.state;
@@ -122,17 +147,7 @@ class ProjectRow extends Component {
                             <p className='descriptiopn'>{project.descriptionText}</p>
                             <Row className='techs-row'>{project.technologies.map(t => this.renderTech(t))}</Row>
                             <Row><h6  className='linkTitle'>View on</h6></Row>
-                            <Row>
-                                <a href={project.github}>
-                                    <img class="img-fluid linkImage" src={github} alt="github image"></img>
-                                </a>
-                                <a href={project.link}>
-                                    <img class="img-fluid linkImage" src={link} alt="link image"></img>
-                                </a>
-                                <a href={project.store}>
-                                    <img class="img-fluid linkImage" src={store} alt="store image"></img>
-                                </a>
-                            </Row>
+                             { this.renderLinksRow(project) }
                         </Col>
                         <Col md={6}>
                             <Row className='projectImages'>
@@ -164,17 +179,7 @@ class ProjectRow extends Component {
                     <p className='descriptiopn'>{project.descriptionText}</p>
                     <Row className='techs-row'>{project.technologies.map(t => this.renderTech(t))}</Row>
                     <Row><h6  className='linkTitle'>View on</h6></Row>
-                    <Row>
-                        <a href={project.github}>
-                            <img class="img-fluid linkImage" src={github} alt="github image"></img>
-                        </a>
-                        <a href={project.link}>
-                            <img class="img-fluid linkImage" src={link} alt="link image"></img>
-                        </a>
-                        <a href={project.store}>
-                            <img class="img-fluid linkImage" src={store} alt="store image"></img>
-                        </a>
-                    </Row>
+                    { this.renderLinksRow(project) }
                 </Col>
                 
             </Row>
